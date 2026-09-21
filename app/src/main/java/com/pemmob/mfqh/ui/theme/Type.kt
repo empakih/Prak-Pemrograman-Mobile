@@ -8,27 +8,43 @@ import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
 val Typography = Typography(
-    bodyLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        lineHeight = 24.sp,
-        letterSpacing = 0.5.sp
-    )
-    /* Other default text styles to override
+    //style untuk teks besar (judul)
+    headlineMedium = TextStyle(
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.Bold,
+        fontSize = 28.sp,
+        lineHeight = 36.sp,
+        letterSpacing = (-0.5).sp
+    ),
+    //style untuk judul di dalam card
     titleLarge = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.SemiBold,
         fontSize = 22.sp,
         lineHeight = 28.sp,
         letterSpacing = 0.sp
     ),
-    labelSmall = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
-        lineHeight = 16.sp,
+    bodyLarge = TextStyle(
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+        lineHeight = 24.sp,
         letterSpacing = 0.5.sp
+    ),
+    //style untuk teks paragraf sekunder
+    bodyMedium = TextStyle(
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.25.sp
+    ),
+    //Style untuk teks berukuran kecil didalam buttin atau label inputan
+    labelLarge = TextStyle(
+        fontFamily = FontFamily.SansSerif,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        letterSpacing = 0.1.sp
     )
-    */
 )
