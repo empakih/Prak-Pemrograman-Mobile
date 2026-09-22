@@ -35,7 +35,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.pemmob.mfqh.ui.screen.BasicInfoScreen
+import com.pemmob.mfqh.ui.screen.DaftarProductScreen
 import com.pemmob.mfqh.ui.screen.HubungiKamiScreen
+import com.pemmob.mfqh.ui.screen.ProductDetailScreen
 import com.pemmob.mfqh.ui.theme.JualanTheme
 
 class MainActivity : ComponentActivity() {
@@ -52,11 +54,19 @@ class MainActivity : ComponentActivity() {
                     NavHost(navController = navController, startDestination = "basic_info"){
                         composable("basic_info"){
                             BasicInfoScreen(
-                                onNavigateToContact = {navController.navigate("form_screen")}
+                                onNavigateToContact = {navController.navigate("form_screen")},
+                                onNavigateToProducts = {navController.navigate("daftar_product")}
                             )
                         }
                         composable("form_screen"){
                             HubungiKamiScreen(navController = navController)
+                        }
+                        composable("daftar_product"){
+                            DaftarProductScreen(navController = navController)
+                        }
+                        composable("product_detail/{productId}"){ backStackEntry ->
+                            val productId = backStackEntry.arguments?.getString("productId")?.toIntOrNull() ?: 0
+                            ProductDetailScreen(navController = navController, productId = productId)
                         }
                     }
                 }

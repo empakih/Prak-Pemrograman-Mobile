@@ -36,7 +36,10 @@ import com.pemmob.mfqh.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BasicInfoScreen(onNavigateToContact: () -> Unit) {
+fun BasicInfoScreen(
+    onNavigateToContact: () -> Unit,
+    onNavigateToProducts: () -> Unit
+) {
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
@@ -148,6 +151,26 @@ fun BasicInfoScreen(onNavigateToContact: () -> Unit) {
             }
 
             Spacer(modifier = Modifier.weight(1f))
+
+            Button(
+                onClick = onNavigateToProducts,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = RoundedCornerShape(25.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.tertiary
+                )
+            ) {
+                Text(
+                    text = "Daftar Produk",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = Color.White
+                )
+            }
+
+            Spacer(modifier = Modifier.height(8.dp))
 
             Button(
                 onClick = onNavigateToContact,
