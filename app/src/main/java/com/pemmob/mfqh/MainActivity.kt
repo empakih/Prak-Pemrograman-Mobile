@@ -37,7 +37,7 @@ import androidx.navigation.compose.rememberNavController
 import com.pemmob.mfqh.ui.screen.BasicInfoScreen
 import com.pemmob.mfqh.ui.screen.DaftarProductScreen
 import com.pemmob.mfqh.ui.screen.HubungiKamiScreen
-import com.pemmob.mfqh.ui.screen.ProductDetailScreen
+import com.pemmob.mfqh.ui.screen.DetailProductScreen
 import com.pemmob.mfqh.ui.theme.JualanTheme
 
 class MainActivity : ComponentActivity() {
@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                         }
                         composable("product_detail/{productId}"){ backStackEntry ->
                             val productId = backStackEntry.arguments?.getString("productId")?.toIntOrNull() ?: 0
-                            ProductDetailScreen(navController = navController, productId = productId)
+                            DetailProductScreen(productId = productId, navController = navController)
                         }
                     }
                 }

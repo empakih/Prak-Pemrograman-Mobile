@@ -24,3 +24,10 @@
   <img width="30%" alt="katalog" src="docs/screenshot/katalog.jpg"/>
   <img width="30%" alt="popup" src="docs/screenshot/popup.jpg"/>
 </p>
+
+### Pertemuan 4
+
+<p align="left">
+  <video width="30%" controls src="docs/screenshot/screenrecord.mp4"></video>
+</p>
+
