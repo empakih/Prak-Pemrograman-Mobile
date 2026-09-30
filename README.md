@@ -26,8 +26,6 @@
 </p>
 
 ### Pertemuan 4
+https://github.com/user-attachments/assets/4e5b61c3-1ba6-467a-97f4-70e68540787b
 
-<p align="left">
-  <video width="30%" controls src="docs/screenshot/screenrecord.mp4"></video>
-</p>
 
