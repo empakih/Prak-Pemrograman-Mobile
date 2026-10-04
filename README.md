@@ -87,8 +87,8 @@ https://github.com/user-attachments/assets/4e5b61c3-1ba6-467a-97f4-70e68540787b
 ### Pertemuan 5 — Integrasi REST API
 
 <p align="left">
-  <img width="30%" alt="daftar-produk" src="docs/screenshot/photo_6168063441176827051_y.jpg"/>
-  <img width="30%" alt="detail-produk" src="docs/screenshot/photo_6168063441176827052_y.jpg"/>
+  <img width="30%" alt="api1" src="docs/screenshot/api1.jpg"/>
+  <img width="30%" alt="api2" src="docs/screenshot/api2.jpg"/>
 </p>
 
 https://github.com/user-attachments/assets/e2369006-0943-4da9-8264-760f529c20a0
