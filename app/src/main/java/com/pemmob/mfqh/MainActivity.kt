@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -39,6 +40,7 @@ import com.pemmob.mfqh.ui.screen.DaftarProductScreen
 import com.pemmob.mfqh.ui.screen.HubungiKamiScreen
 import com.pemmob.mfqh.ui.screen.DetailProductScreen
 import com.pemmob.mfqh.ui.theme.JualanTheme
+import com.pemmob.mfqh.ui.viewmodel.ProductViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,22 +53,47 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ){
                     val navController = rememberNavController()
+                    val productViewModel: ProductViewModel = viewModel()
                     NavHost(navController = navController, startDestination = "basic_info"){
                         composable("basic_info"){
                             BasicInfoScreen(
-                                onNavigateToContact = {navController.navigate("form_screen")},
+                                onNavigateToContact = {navController.navigate("hubungi_kami")},
                                 onNavigateToProducts = {navController.navigate("daftar_product")}
                             )
                         }
                         composable("form_screen"){
                             HubungiKamiScreen(navController = navController)
                         }
+                        composable("hubungi_kami"){
+                            HubungiKamiScreen(navController = navController)
+                        }
                         composable("daftar_product"){
-                            DaftarProductScreen(navController = navController)
+                            DaftarProductScreen(
+                                navController = navController,
+                                viewModel = productViewModel
+                            )
+                        }
+                        composable("daftar_produk"){
+                            DaftarProductScreen(
+                                navController = navController,
+                                viewModel = productViewModel
+                            )
                         }
                         composable("product_detail/{productId}"){ backStackEntry ->
                             val productId = backStackEntry.arguments?.getString("productId")?.toIntOrNull() ?: 0
-                            DetailProductScreen(productId = productId, navController = navController)
+                            DetailProductScreen(
+                                productId = productId,
+                                navController = navController,
+                                viewModel = productViewModel
+                            )
+                        }
+                        composable("detail/{productId}"){ backStackEntry ->
+                            val productId = backStackEntry.arguments?.getString("productId")?.toIntOrNull() ?: 0
+                            DetailProductScreen(
+                                productId = productId,
+                                navController = navController,
+                                viewModel = productViewModel
+                            )
                         }
                     }
                 }
