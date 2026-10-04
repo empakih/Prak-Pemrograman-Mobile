@@ -91,6 +91,5 @@ https://github.com/user-attachments/assets/4e5b61c3-1ba6-467a-97f4-70e68540787b
   <img width="30%" alt="detail-produk" src="docs/screenshot/photo_6168063441176827052_y.jpg"/>
 </p>
 
-**Demo Video Pertemuan 5:**
+https://github.com/user-attachments/assets/e2369006-0943-4da9-8264-760f529c20a0
 
-https://github.com/empakih/Prak-Pemrograman-Mobile/raw/main/docs/screenshot/document_6201832724160851993.mp4
